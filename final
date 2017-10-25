@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(void) 
+{
+	int num, i, student = 1;
+	int *pi;//
+
+	printf("학생수는? ");
+	scanf_s("%d", &num);
+
+	int score, tot = 0;
+	double avg;
+
+	for (i = 0; i < num; i++) 
+	{
+		printf("%d번째 학생의 점수: ", student);
+		student++;
+		scanf_s("%d", &score);
+		tot += score;
+	}
+
+	avg = (double)tot / num;
+	printf("\n%d명의 평균: %.1lf", num, avg);
+
+	return 0;
+}
